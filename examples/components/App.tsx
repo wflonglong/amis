@@ -29,6 +29,7 @@ import DocNavCN from './DocNavCN';
 import Example, {examples} from './Example';
 import CSSDocs, {cssDocs} from './CssDocs';
 import Components, {components} from './Components';
+import WFLPageComponent from './wflPage';
 
 declare const _hmt: any;
 
@@ -726,6 +727,11 @@ export default function entry({pathPrefix}) {
           from={`${ContextPath}/${locate}/components`}
           to={`${ContextPath}/${locate}/components/page`}
         />
+
+
+        <Route path={`${ContextPath}/examples/wflpage`} component={WFLPageComponent}>
+          {navigations2route(examples)}
+        </Route>
 
         {/* expamles */}
         <Redirect
