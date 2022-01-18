@@ -729,10 +729,6 @@ export default function entry({pathPrefix}) {
         />
 
 
-        <Route path={`${ContextPath}/examples/wflpage`} component={WFLPageComponent}>
-          {navigations2route(examples)}
-        </Route>
-
         {/* expamles */}
         <Redirect
           from={`${ContextPath}/examples`}
@@ -757,6 +753,11 @@ export default function entry({pathPrefix}) {
         <Route path={`${ContextPath}/${locate}/style`} component={CSSDocs}>
           {navigations2route(cssDocs)}
         </Route>
+
+
+
+        <Route path={`${ContextPath}/examples/wflpage`} component={WFLPageComponent}></Route>
+
       </Route>
 
       <Route path="*" component={NotFound} />
